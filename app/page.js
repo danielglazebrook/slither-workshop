@@ -87,7 +87,7 @@ const tiers = [
     id: "tier-prestige",
     href: "#",
     newWebsitePrice: "£7,000",
-    priceMonthly: "$300",
+    priceMonthly: "£300",
     description: "Brands looking to accelerate growth and drive online sales.",
     features: [
       "Luxury retailers with single or multiple stores looking to grow online.",
@@ -107,7 +107,7 @@ const tiers = [
     id: "tier-elite",
     href: "#",
     newWebsitePrice: "Please enquire with us for our fully customised package",
-    priceMonthly: "$500",
+    priceMonthly: "£500",
     description:
       "Brands looking to disrupt the industry and bring high value turnover.",
     features: [
@@ -473,7 +473,7 @@ export default function Home() {
               key={tier.id}
               className={classNames(
                 tier.featured
-                  ? "relative bg-gray-900 shadow-2xl"
+                  ? "relative bg-fuchsia-900 shadow-2xl"
                   : "bg-white/60 sm:mx-8 lg:mx-0",
                 tier.featured
                   ? ""
