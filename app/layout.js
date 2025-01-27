@@ -12,8 +12,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Worm Studio | ",
-  description: "Shopify Website Development Specialists",
+  title: "Worm Studio | Official Shopify Partner Agency",
+  description: "Shopify website development, design and seo specialists based in Northampton, England.",
 };
 
 export default function RootLayout({ children }) {
