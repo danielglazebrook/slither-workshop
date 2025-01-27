@@ -473,7 +473,7 @@ export default function Home() {
               key={tier.id}
               className={classNames(
                 tier.featured
-                  ? "relative bg-fuchsia-900 shadow-2xl"
+                  ? "relative bg-fuchsia-700 shadow-2xl"
                   : "bg-white/60 sm:mx-8 lg:mx-0",
                 tier.featured
                   ? ""
