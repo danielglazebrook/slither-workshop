@@ -375,7 +375,7 @@ export default function Home() {
             <h2 className="text-5xl font-semibold tracking-tight text-white sm:text-7xl">
               Work with us
             </h2>
-            <p className="mt-8 text-pretty text-lg font-medium text-gray-300 sm:text-xl/8">
+            <p className="mt-8 text-pretty text-lg font-medium text-white sm:text-xl/8">
               At Worm, we know that you like to speak to real people who
               understand your business, as well as your business needs. We bring
               industry experience, and design services to help your company
@@ -393,7 +393,7 @@ export default function Home() {
             <dl className="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
               {stats.map((stat) => (
                 <div key={stat.name} className="flex flex-col-reverse gap-1">
-                  <dt className="text-base/7 text-gray-300">{stat.name}</dt>
+                  <dt className="text-base/7 text-white">{stat.name}</dt>
                   <dd className="text-4xl font-semibold tracking-tight text-white">
                     {stat.value}
                   </dd>
@@ -512,7 +512,7 @@ export default function Home() {
               </p>
               <p
                 className={classNames(
-                  tier.featured ? "text-gray-300" : "text-gray-600",
+                  tier.featured ? "text-white" : "text-gray-600",
                   "mt-6 text-base/7"
                 )}
               >
@@ -521,7 +521,7 @@ export default function Home() {
               <ul
                 role="list"
                 className={classNames(
-                  tier.featured ? "text-gray-300" : "text-gray-600",
+                  tier.featured ? "text-white" : "text-gray-600",
                   "mt-8 space-y-3 text-sm/6 sm:mt-10"
                 )}
               >
