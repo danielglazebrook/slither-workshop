@@ -423,7 +423,7 @@ export default function Home() {
           Choose an affordable plan that’s packed with the best features for
           engaging your audience, creating customer loyalty, and driving sales.
         </p>
-        <div className="lg:mx-auto mt-10 sm:mt-16 grid lg:max-w-lg grid-cols-1 gap-y-6 sm:mt-20 lg:gap-y-0 lg:max-w-7xl lg:grid-cols-3 lg:gap-x-4">
+        <div className="lg:mx-auto mt-10 sm:mt-16 grid lg:max-w-lg grid-cols-1 gap-y-6 sm:mt-20 lg:gap-y-0 lg:grid-cols-3 lg:gap-x-4">
           {tiers.map((tier, tierIdx) => (
             <div
               key={tier.id}
