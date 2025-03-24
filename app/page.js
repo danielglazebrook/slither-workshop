@@ -24,37 +24,37 @@ import studioImage from "../public/studio.jpg";
 import Image from "next/image";
 
 const navigation = [
-  { name: "Who we are.", href: "/who-we-are" },
-  { name: "What we do.", href: "/what-we-do" },
-  { name: "Our work.", href: "/our-work" },
-  { name: "Pricing tiers.", href: "#pricing-tiers" },
-  { name: "Blog.", href: "/blogs" },
-  { name: "Contact us.", href: "/contact-us" },
+  // { name: "Who we are.", href: "/who-we-are" },
+  // { name: "What we do.", href: "/what-we-do" },
+  // { name: "Our work.", href: "/our-work" },
+  // { name: "Pricing tiers.", href: "#pricing-tiers" },
+  // { name: "Blog.", href: "/blogs" },
+  // { name: "Contact us.", href: "/contact-us" },
 ];
 
 const features = [
   {
     name: "Ecommerce Specialists.",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+      "We transform online businesses with strategic design and technical expertise that drives measurable growth and exceptional customer experiences.",
     icon: PresentationChartLineIcon,
   },
   {
     name: "Custom Elements.",
     description:
-      "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.",
+      "We craft tailored Shopify section designs that seamlessly blend brand aesthetics with conversion-focused functionality, bringing your unique vision to life while maximizing sales potential.",
     icon: AdjustmentsVerticalIcon,
   },
   {
     name: "Quality and Affordable Service.",
     description:
-      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
+      "Our transparent and cost-effective approach eliminates hidden fees while delivering intuitive solutions that provide complete clarity on project scope, timeline, and ROI, ensuring you get exceptional ecommerce functionality without breaking your budget.",
     icon: CurrencyPoundIcon,
   },
 ];
 
 const stats = [
-  { name: "Office location 🇬🇧", value: "England, UK" },
+  { name: "Office location", value: "England, UK 🇬🇧" },
   { name: "Unique pricing tiers", value: "3" },
   { name: "Official partner agency", value: "Shopify" },
   { name: "Transparent & honest", value: "Always" },
@@ -106,8 +106,8 @@ const tiers = [
     name: "Elite",
     id: "tier-elite",
     href: "#",
-    newWebsitePrice: "Please enquire with us for our fully customised package",
-    priceMonthly: "£500",
+    newWebsitePrice: "£12,000",
+    priceMonthly: "£600",
     description:
       "Brands looking to disrupt the industry and bring high value turnover.",
     features: [
@@ -218,6 +218,7 @@ export default function Home() {
                 <Image alt="" src={iconSVG} className="h-14 w-auto" />
               </a>
             </div>
+            {navigation.length > 0 &&
             <div className="flex lg:hidden">
               <button
                 type="button"
@@ -228,6 +229,7 @@ export default function Home() {
                 <Bars3Icon aria-hidden="true" className="size-6" />
               </button>
             </div>
+            }
             <div className="hidden lg:flex lg:gap-x-12">
               {navigation.map((item) => (
                 <a
@@ -279,39 +281,33 @@ export default function Home() {
                       </a>
                     ))}
                   </div>
-                  <div className="py-6">
-                    <a
-                      href="#"
-                      className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                    >
-                      Log in
-                    </a>
-                  </div>
                 </div>
               </div>
             </DialogPanel>
           </Dialog>
         </header>
+      </div>
 
-        <div className="overflow-hidden bg-white py-24 sm:pt-20 sm:pb-32">
+      {/* Intro */}
+      <div className="overflow-hidden bg-white py-10 pb-20 sm:py-24">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 flex items-center">
+            <div className="mx-auto grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 flex items-center">
               <div className="lg:pr-8 lg:pt-4">
                 <div className="lg:max-w-lg">
                   <h2 className="text-base/7 font-semibold text-slate-500">
                     More than just an agency.
                   </h2>
-                  <p className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
-                    At Worm we offer personalised Shopify website design and SEO
-                    services.
+                  <p className="mt-3 sm:mt-2 text-pretty md:text-4xl font-semibold tracking-tight text-gray-900 text-3xl">
+                    At Worm we offer personalised Shopify website design, SEO
+                    services and specialised ecommerce business solutions.
                   </p>
-                  <p className="mt-6 text-lg/8 text-gray-600">
+                  <p className="mt-6 sm:mt-8 text-lg/8 text-gray-600">
                     Based in the UK, our friendly team are always on hand to
                     help your business with all things digital. We are a
                     passionate and talented team, with a wide-range of skills to
                     help your business flourish within the digital landscape.
                   </p>
-                  <dl className="mt-10 max-w-xl space-y-8 text-base/7 text-gray-600 lg:max-w-none">
+                  <dl className="mt-8 sm:mt-10 max-w-xl space-y-8 text-base/7 text-gray-600 lg:max-w-none">
                     {features.map((feature) => (
                       <div key={feature.name} className="relative pl-9">
                         <dt className="inline font-semibold text-gray-900">
@@ -332,19 +328,18 @@ export default function Home() {
                 src={screenshotImage}
                 width={2432}
                 height={1442}
-                className="mt-8 w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
+                className="sm:mt-8 w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
               />
             </div>
           </div>
         </div>
-      </div>
 
       {/* Work with us section */}
-      <div className="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
+      <div className="relative isolate overflow-hidden bg-gray-900 py-16 sm:py-32">
         <Image
           alt=""
           src={studioImage}
-          className="absolute inset-0 -z-10 size-full object-cover object-right md:object-center"
+          className="absolute inset-0 -z-10 size-full object-cover object-right md:object-center filter:hue-rotate(270deg)"
         />
         <div
           aria-hidden="true"
@@ -372,7 +367,7 @@ export default function Home() {
         </div>
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
-            <h2 className="text-5xl font-semibold tracking-tight text-white sm:text-7xl">
+            <h2 className="text-4xl md:text-7xl font-semibold tracking-tight text-white">
               Work with us
             </h2>
             <p className="mt-8 text-pretty text-lg font-medium text-white sm:text-xl/8">
@@ -382,19 +377,19 @@ export default function Home() {
               achieve it's goals.
             </p>
           </div>
-          <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
-            <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-base/7 font-semibold text-white sm:grid-cols-2 md:flex lg:gap-x-10">
+          <div className="mx-auto mt-5 sm:mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
+            <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-base/7 font-semibold text-white sm:grid-cols-2 sm:flex lg:gap-x-10">
               {links.map((link) => (
                 <a key={link.name} href={link.href}>
                   {link.name} <span aria-hidden="true">&rarr;</span>
                 </a>
               ))}
             </div>
-            <dl className="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
+            <dl className="mt-10 sm:mt-12 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
               {stats.map((stat) => (
-                <div key={stat.name} className="flex flex-col-reverse gap-1">
+                <div key={stat.name} className="flex flex-col-reverse gap-1 sm:text-center">
                   <dt className="text-base/7 text-white">{stat.name}</dt>
-                  <dd className="text-4xl font-semibold tracking-tight text-white">
+                  <dd className="text-3xl lg:text-4xl font-semibold tracking-tight text-white">
                     {stat.value}
                   </dd>
                 </div>
@@ -404,8 +399,138 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Pricing section */}
+      <div className="relative isolate bg-white px-6 py-16 sm:py-32 lg:px-8 max-w-7xl mx-auto">
+        <div
+          aria-hidden="true"
+          className="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl"
+        >
+          <div
+            style={{
+              clipPath:
+                "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
+            }}
+            className="mx-auto aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30"
+          />
+        </div>
+        <div id="pricing-tiers" className="mx-auto max-w-7xl">
+          <h2 className="text-base/7 font-semibold text-slate-500">Pricing</h2>
+          <p className="mt-3 sm:mt-2 text-balance text-4xl md:text-7xl font-semibold tracking-tight">
+            Choose the right plan for you
+          </p>
+        </div>
+        <p className="mx-auto mt-6 sm:mt-8 max-w-7xl text-pretty text-lg font-medium text-gray-600 sm:text-xl/8">
+          Choose an affordable plan that’s packed with the best features for
+          engaging your audience, creating customer loyalty, and driving sales.
+        </p>
+        <div className="lg:mx-auto mt-10 sm:mt-16 grid lg:max-w-lg grid-cols-1 gap-y-6 sm:mt-20 lg:gap-y-0 lg:max-w-7xl lg:grid-cols-3 lg:gap-x-4">
+          {tiers.map((tier, tierIdx) => (
+            <div
+              key={tier.id}
+              className={classNames(
+                tier.featured
+                  ? "relative bg-sky-400 lg:shadow-2xl"
+                  : "bg-white/60",
+                tier.featured
+                  ? ""
+                  : tierIdx === 0
+                  ? "rounded-3xl ring-1 ring-sky-400 rounded-3xl"
+                  : "sm:rounded-3xl ring-1 ring-sky-400 lg:rounded-3xl",
+                "rounded-3xl p-8  sm:p-10"
+              )}
+            >
+              <h3
+                id={tier.id}
+                className={classNames(
+                  tier.featured ? "text-fuchsia-200" : "text-sky-400",
+                  "text-base/7 font-semibold"
+                )}
+              >
+                {tier.name}
+              </h3>
+              <p className="mt-4 flex items-baseline gap-x-2">
+                <span
+                  className={classNames(
+                    tier.featured ? "text-white" : "text-sky-400",
+                    "text-5xl font-semibold tracking-tight"
+                  )}
+                >
+                  {tier.newWebsitePrice}
+                </span>
+                <span
+                  className={classNames(
+                    tier.featured ? "text-white" : "text-gray-500",
+                    "text-base"
+                  )}
+                >
+                  {tierIdx === 2 ? '' : '(includes Tax)'}
+                </span>
+              </p>
+              <p className="mt-4 flex items-baseline gap-x-2">
+                <span
+                  className={classNames(
+                    tier.featured ? "text-white" : "text-sky-400",
+                    "text-5xl font-semibold tracking-tight"
+                  )}
+                >
+                  {tier.priceMonthly}
+                </span>
+                <span
+                  className={classNames(
+                    tier.featured ? "text-white" : "text-gray-500",
+                    "text-base"
+                  )}
+                >
+                  /month
+                </span>
+              </p>
+              <p
+                className={classNames(
+                  tier.featured ? "text-white" : "text-gray-600",
+                  "mt-4 md:mt-6 text-base/7"
+                )}
+              >
+                {tier.description}
+              </p>
+              <ul
+                role="list"
+                className={classNames(
+                  tier.featured ? "text-white" : "text-gray-600",
+                  "mt-6 md:mt-8 space-y-2 md:space-y-3 text-sm/6"
+                )}
+              >
+                {tier.features.map((feature) => (
+                  <li key={feature} className="flex gap-x-3">
+                    <CheckIcon
+                      aria-hidden="true"
+                      className={classNames(
+                        tier.featured ? "text-white" : "text-sky-400",
+                        "h-6 w-5 flex-none"
+                      )}
+                    />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <a
+                href={tier.href}
+                aria-describedby={tier.id}
+                className={classNames(
+                  tier.featured
+                    ? "bg-sky-400 border border-solid border-white text-white shadow-sm hover:bg-white hover:text-sky-400"
+                    : "text-sky-400 ring-1 ring-inset ring-sky-400 hover:bg-sky-400 hover:text-white",
+                  "mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 mt-8 lg:mt-10"
+                )}
+              >
+                Get started today.
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+
       {/* Features section */}
-      <div className="bg-white py-24 sm:py-32">
+      {/* <div className="bg-white py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:text-center">
             <h2 className="text-base/7 font-semibold text-slate-500">
@@ -441,120 +566,7 @@ export default function Home() {
             </dl>
           </div>
         </div>
-      </div>
-
-      {/* Pricing section */}
-      <div className="relative isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
-        <div
-          aria-hidden="true"
-          className="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl"
-        >
-          <div
-            style={{
-              clipPath:
-                "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-            }}
-            className="mx-auto aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30"
-          />
-        </div>
-        <div id="pricing-tiers" className="mx-auto max-w-4xl text-center">
-          <h2 className="text-base/7 font-semibold text-slate-500">Pricing</h2>
-          <p className="mt-2 text-balance text-5xl font-semibold tracking-tight sm:text-6xl">
-            Choose the right plan for you
-          </p>
-        </div>
-        <p className="mx-auto mt-6 max-w-2xl text-pretty text-center text-lg font-medium text-gray-600 sm:text-xl/8">
-          Choose an affordable plan that’s packed with the best features for
-          engaging your audience, creating customer loyalty, and driving sales.
-        </p>
-        <div className="mx-auto mt-16 grid max-w-lg grid-cols-1 items-center gap-y-6 sm:mt-20 sm:gap-y-0 lg:max-w-6xl lg:grid-cols-3">
-          {tiers.map((tier, tierIdx) => (
-            <div
-              key={tier.id}
-              className={classNames(
-                tier.featured
-                  ? "relative bg-fuchsia-700 shadow-2xl"
-                  : "bg-white/60 sm:mx-8 lg:mx-0",
-                tier.featured
-                  ? ""
-                  : tierIdx === 0
-                  ? "rounded-3xl lg:rounded-3xl"
-                  : "sm:rounded-3xl lg:rounded-3xl",
-                "rounded-3xl p-8 ring-1 ring-gray-900/10 sm:p-10"
-              )}
-            >
-              <h3
-                id={tier.id}
-                className={classNames(
-                  tier.featured ? "text-fuchsia-200" : "text-slate-500",
-                  "text-base/7 font-semibold"
-                )}
-              >
-                {tier.name}
-              </h3>
-              <p className="mt-4 flex items-baseline gap-x-2">
-                <span
-                  className={classNames(
-                    tier.featured ? "text-white" : "text-gray-900",
-                    "text-5xl font-semibold tracking-tight"
-                  )}
-                >
-                  {tier.priceMonthly}
-                </span>
-                <span
-                  className={classNames(
-                    tier.featured ? "text-gray-400" : "text-gray-500",
-                    "text-base"
-                  )}
-                >
-                  /month
-                </span>
-              </p>
-              <p
-                className={classNames(
-                  tier.featured ? "text-white" : "text-gray-600",
-                  "mt-6 text-base/7"
-                )}
-              >
-                {tier.description}
-              </p>
-              <ul
-                role="list"
-                className={classNames(
-                  tier.featured ? "text-white" : "text-gray-600",
-                  "mt-8 space-y-3 text-sm/6 sm:mt-10"
-                )}
-              >
-                {tier.features.map((feature) => (
-                  <li key={feature} className="flex gap-x-3">
-                    <CheckIcon
-                      aria-hidden="true"
-                      className={classNames(
-                        tier.featured ? "text-fuchsia-200" : "text-sky-400",
-                        "h-6 w-5 flex-none"
-                      )}
-                    />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-              <a
-                href={tier.href}
-                aria-describedby={tier.id}
-                className={classNames(
-                  tier.featured
-                    ? "bg-slate-500 text-white shadow-sm hover:bg-slate-600 focus-visible:outline-slate-600"
-                    : "text-sky-400 ring-1 ring-inset ring-sky-400 hover:ring-sky-500 focus-visible:outline-sky-400",
-                  "mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10"
-                )}
-              >
-                Get started today.
-              </a>
-            </div>
-          ))}
-        </div>
-      </div>
-
+      </div> */}
 
       {/*  Blog section */}
       {/* <div className="bg-white py-24 sm:py-32">
@@ -613,6 +625,9 @@ export default function Home() {
           </div>
         </div>
       </div> */}
+
+      <footer className="bg-fuchsia-200 h-24">
+      </footer>
       
     </div>
   );
