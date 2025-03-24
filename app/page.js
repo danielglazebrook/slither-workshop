@@ -24,12 +24,12 @@ import studioImage from "../public/studio.jpg";
 import Image from "next/image";
 
 const navigation = [
-  // { name: "Who we are.", href: "/who-we-are" },
-  // { name: "What we do.", href: "/what-we-do" },
-  // { name: "Our work.", href: "/our-work" },
-  // { name: "Pricing tiers.", href: "#pricing-tiers" },
-  // { name: "Blog.", href: "/blogs" },
-  // { name: "Contact us.", href: "/contact-us" },
+  { name: "Who we are.", href: "/who-we-are" },
+  { name: "What we do.", href: "/what-we-do" },
+  { name: "Our work.", href: "/our-work" },
+  { name: "Pricing tiers.", href: "#pricing-tiers" },
+  { name: "Blog.", href: "/blogs" },
+  { name: "Contact us.", href: "/contact-us" },
 ];
 
 const features = [
@@ -210,7 +210,7 @@ export default function Home() {
         <header className="inset-x-0 z-50 border-b border-solid border-gray-200">
           <nav
             aria-label="Global"
-            className="flex items-center justify-between p-6 lg:px-8"
+            className="flex items-center justify-between p-6 lg:px-8 mx-auto max-w-7xl"
           >
             <div className="flex lg:flex-1">
               <a href="#" className="-m-1.5 p-1.5">
@@ -289,7 +289,7 @@ export default function Home() {
       </div>
 
       {/* Intro */}
-      <div className="overflow-hidden bg-white py-10 pb-20 sm:py-24">
+      <div className="overflow-hidden bg-white py-10 pb-20 sm:pt-14">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 flex items-center">
               <div className="lg:pr-8 lg:pt-4">
