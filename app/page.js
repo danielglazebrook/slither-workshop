@@ -185,20 +185,15 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-
-
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [agreed, setAgreed] = useState(false);
   return (
     <div>
         <Script 
-        src="https://www.googletagmanager.com/gtag/js?id=G-QM1Z29RH14" 
-        async 
+        src="https://example.com/script.js" 
+        strategy="beforeInteractive" 
       />
-      <Script>
-        window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments)} gtag('js', new Date()); gtag('config', 'G-QM1Z29RH14');
-      </Script>
       {/* Infobar header */}
       <div className="relative isolate items-center gap-x-6 overflow-hidden bg-fuchsia-200 px-6 py-2.5 sm:px-3.5 sm:before:flex-1">
         <div className="flex flex-wrap justify-center items-center gap-x-4 gap-y-2">
