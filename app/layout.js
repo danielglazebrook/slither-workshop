@@ -12,10 +12,10 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
-  title: "Worm Studio | Official Shopify Partner Agency",
-  description: "Shopify website development, design and seo specialists based in Northampton, England.",
-};
+// export const metadata = {
+//   title: "Worm Studio | Official Shopify Partner Agency",
+//   description: "Shopify website development, design and seo specialists based in Northampton, England.",
+// };
 
 export default function RootLayout({ children }) {
   return (
