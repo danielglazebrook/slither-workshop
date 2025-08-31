@@ -629,6 +629,7 @@ export default function Home() {
       </div> */}
 
       <footer className="bg-fuchsia-200 h-24">
+        <p>Copyright Worm Studio 2025</p>
       </footer>
       
     </div>
