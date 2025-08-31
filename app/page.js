@@ -24,12 +24,14 @@ import studioImage from "../public/studio.jpg";
 import Image from "next/image";
 
 const navigation = [
-  { name: "Who we are.", href: "/who-we-are" },
-  { name: "What we do.", href: "/what-we-do" },
-  { name: "Our work.", href: "/our-work" },
+  { name: "Who we are.", href: "#intro" },
+  { name: "What we do.", href: "#work-with-us" },
+//   { name: "Our work.", href: "/our-work" },
   { name: "Pricing tiers.", href: "#pricing-tiers" },
-  { name: "Blog.", href: "/blogs" },
-  { name: "Contact us.", href: "/contact-us" },
+//   { name: "Blog.", href: "/blogs" },
+//   { name: "Contact us.", href: "/contact-us" },
+    { name: "Email us.", href: "mail:hello@wormstudio.co.uk" },
+    { name: "Call us.", href: "tel:07593379619" },
 ];
 
 const features = [
@@ -291,7 +293,7 @@ export default function Home() {
       </div>
 
       {/* Intro */}
-      <div className="overflow-hidden bg-white py-10 pb-20 sm:pt-14">
+      <div id="intro" className="overflow-hidden bg-white py-10 pb-20 sm:pt-14">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 flex items-center">
               <div className="lg:pr-8 lg:pt-4">
@@ -337,7 +339,7 @@ export default function Home() {
         </div>
 
       {/* Work with us section */}
-      <div className="relative isolate overflow-hidden bg-gray-900 py-16 sm:py-32">
+      <div id="work-with-us" className="relative isolate overflow-hidden bg-gray-900 py-16 sm:py-32">
         <Image
           alt=""
           src={studioImage}
