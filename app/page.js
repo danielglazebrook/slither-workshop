@@ -467,7 +467,7 @@ export default function Home() {
                     "text-base"
                   )}
                 >
-                  {tierIdx === 2 ? '' : '(includes Tax)'}
+                  {tierIdx === 3 ? '' : '(includes Tax)'}
                 </span>
               </p>
               <p className="mt-4 flex items-baseline gap-x-2">
