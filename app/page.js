@@ -30,7 +30,7 @@ const navigation = [
   { name: "Pricing tiers.", href: "#pricing-tiers" },
 //   { name: "Blog.", href: "/blogs" },
 //   { name: "Contact us.", href: "/contact-us" },
-    { name: "Email us.", href: "mail:hello@wormstudio.co.uk" },
+    { name: "Email us.", href: "mailto:hello@wormstudio.co.uk" },
     { name: "Call us.", href: "tel:07593379619" },
 ];
 
